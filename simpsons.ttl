@@ -30,6 +30,18 @@ sim:Maggie rdf:type foaf:Person ;
            foaf:name "Maggie Simpson" ;
            foaf:age "1"^^xsd:int .
 
+#Grandparents
+sim:Abraham rdf:type foaf:Person .
+sim:Mona rdf:type foaf:Person .
+
+#Aunts and Uncles
+sim:Patty rdf:type foaf:Person .
+sim:Selma rdf:type foaf:Person .
+sim:Herb rdf:type foaf:Person .
+
+sim:Patty fam:hasSister sim:Selma .
+sim:Selma fam:hasSister sim:Patty .
+
 #The Simpson
 sim:TheSimpsons rdf:type fam:Family ;
                 fam:hasFamilyMember sim:Homer ,
@@ -57,12 +69,20 @@ sim:Maggie fam:hasFather sim:Homer ;
            fam:hasBrother sim:Bart ;
            fam:hasSister sim:Lisa .
 
-sim:Abraham rdf:type foaf:Person .
-sim:Mona rdf:type foaf:Person .
-
+#Maggies Grandparents
 sim:Maggie fam:hasParent [
     fam:hasFather sim:Abraham
 ] .
 sim::Maggie fam:hasParent [
     fam:hasMother sim:Mona
+] .
+
+#Lisas Aunts and Uncles
+sim:Lisa fam:hasParent [
+    fam:hasSister sim:Selma ;
+    fam:hasSister sim:Patty
+] .
+
+sim:Lisa fam:hasParent [
+    fam:hasBrother sim:Herb
 ] .
