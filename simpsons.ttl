@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fam: <http://www.ifi.uio.no/INF3580/family#> .
+@prefix sim: <http://www.ifi.uio.no/INF3580/simpsons#> .
+
+#Homer
+sim:Homer rdf:type foaf:Person .
+sim:Homer foaf:name "Homer Simpson" .
+sim:Homer foaf:age "36"^^xsd:integer .
+
+#Marge
+sim:Marge rdf:type foaf:Person .
+sim:Marge foaf:name "Marge Simpson" .
+sim:Marge foaf:age "34"^^xsd:integer .
+
+#Bart
+sim:Bart rdf:type foaf:Person .
+sim:Bart foaf:name "Bart Simpson" .
+sim:Bart foaf:age "10"^^xsd:integer .
+
+#Lisa
+sim:Lisa rdf:type foaf:Person .
+sim:Lisa foaf:name "Lisa Simpson" .
+sim:Lisa foaf:age "8"^^xsd:integer .
+
+#Maggie
+sim:Maggie rdf:type foaf:Person .
+sim:Maggie foaf:name "Maggie Simpson" .
+sim:Maggie foaf:age "1"^^xsd:integer .
