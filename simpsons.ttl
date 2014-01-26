@@ -11,48 +11,58 @@ sim:Homer foaf:name "Homer Simpson" .
 sim:Homer foaf:age "36"^^xsd:int .
 
 #Marge
-sim:Marge rdf:type foaf:Person .
-sim:Marge foaf:name "Marge Simpson" .
-sim:Marge foaf:age "34"^^xsd:int .
+sim:Marge rdf:type foaf:Person ;
+          foaf:name "Marge Simpson" ;
+          foaf:age "34"^^xsd:int .
 
 #Bart
-sim:Bart rdf:type foaf:Person .
-sim:Bart foaf:name "Bart Simpson" .
-sim:Bart foaf:age "10"^^xsd:int .
+sim:Bart rdf:type foaf:Person ;
+         foaf:name "Bart Simpson" ;
+         foaf:age "10"^^xsd:int .
 
 #Lisa
-sim:Lisa rdf:type foaf:Person .
-sim:Lisa foaf:name "Lisa Simpson" .
-sim:Lisa foaf:age "8"^^xsd:int .
+sim:Lisa rdf:type foaf:Person ;
+         foaf:name "Lisa Simpson" ;
+         foaf:age "8"^^xsd:int .
 
 #Maggie
-sim:Maggie rdf:type foaf:Person .
-sim:Maggie foaf:name "Maggie Simpson" .
-sim:Maggie foaf:age "1"^^xsd:int .
+sim:Maggie rdf:type foaf:Person ;
+           foaf:name "Maggie Simpson" ;
+           foaf:age "1"^^xsd:int .
 
 #The Simpson
-sim:TheSimpsons rdf:type fam:Family .
-sim:TheSimpsons fam:hasFamilyMember sim:Homer .
-sim:TheSimpsons fam:hasFamilyMember sim:Marge .
-sim:TheSimpsons fam:hasFamilyMember sim:Bart .
-sim:TheSimpsons fam:hasFamilyMember sim:Lisa . 
-sim:TheSimpsons fam:hasFamilyMember sim:Maggie .
+sim:TheSimpsons rdf:type fam:Family ;
+                fam:hasFamilyMember sim:Homer ,
+                                    sim:Marge ,
+                                    sim:Bart ,
+                                    sim:Lisa , 
+                                    sim:Maggie .
 
 #Family relationships
 sim:Homer fam:hasSpouse sim:Marge .
 sim:Marge fam:hasSpouse sim:Homer .
 
-sim:Bart fam:hasFather sim:Homer .
-sim:Bart fam:hasMother sim:Marge .
-sim:Bart fam:hasSister sim:Lisa .
-sim:Bart fam:hasSister sim:Maggie .
+sim:Bart fam:hasFather sim:Homer ;
+         fam:hasMother sim:Marge ;
+         fam:hasSister sim:Lisa ;
+         fam:hasSister sim:Maggie .
 
-sim:Lisa fam:hasFather sim:Homer .
-sim:Lisa fam:hasMother sim:Marge .
-sim:Lisa fam:hasBrother sim:Bart .
-sim:Lisa fam:hasSister sim:Maggie .
+sim:Lisa fam:hasFather sim:Homer ;
+         fam:hasMother sim:Marge ;
+         fam:hasBrother sim:Bart ;
+         fam:hasSister sim:Maggie .
 
-sim:Maggie fam:hasFather sim:Homer .
-sim:Maggie fam:hasMother sim:Marge .
-sim:Maggie fam:hasBrother sim:Bart .
-sim:Maggie fam:hasSister sim:Lisa .
+sim:Maggie fam:hasFather sim:Homer ;
+           fam:hasMother sim:Marge ;
+           fam:hasBrother sim:Bart ;
+           fam:hasSister sim:Lisa .
+
+sim:Abraham rdf:type foaf:Person .
+sim:Mona rdf:type foaf:Person .
+
+sim:Maggie fam:hasParent [
+    fam:hasFather sim:Abraham
+] .
+sim::Maggie fam:hasParent [
+    fam:hasMother sim:Mona
+] .
