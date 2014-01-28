@@ -70,7 +70,6 @@ sim:Maggie fam:hasFather sim:Homer ;
            fam:hasSister sim:Lisa .
 
 #Maggies Grandparents
-#TODO: Can these use the same blanknode?
 sim:Maggie fam:hasParent [
     fam:hasFather sim:Abraham
 ] .
@@ -80,7 +79,6 @@ sim:Maggie fam:hasParent [
 ] .
 
 #Lisas Aunts and Uncles
-#TODO: Can these use the same blanknode?
 sim:Lisa fam:hasParent [
     fam:hasSister sim:Selma ;
     fam:hasSister sim:Patty
@@ -91,9 +89,6 @@ sim:Lisa fam:hasParent [
 ] .
 
 #Marge father in law
-#TODO: Ask if this is sufficient or if we need to use the blanknode version
-sim:Homer fam:hasFather sim:Abraham .
-
 sim:Marge fam:hasSpouse [
     fam:hasFather sim:Abraham
 ] .
